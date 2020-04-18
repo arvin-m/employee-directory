@@ -4,9 +4,9 @@ import Table from '../Table/Table';
 
 
 
-function Main() {
+function Main() {  
   
-  const [user, setUser] = useState(0);
+
 
   return (
     <div className="container">
