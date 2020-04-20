@@ -28,7 +28,7 @@ function Table (){
               name: user.name.first +" "+ user.name.last,
               phone: user.phone,
               email: user.email,
-              dob: user.dob.date
+              dob: user.dob.date.slice(0,10)
             })
           });
           setUsers(allUsers);
