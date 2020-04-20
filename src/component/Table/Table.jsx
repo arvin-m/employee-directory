@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import API from '../../utils/API';
+
 
 
 function Table (){
     
+    const [users, setUsers] = useState([
+        {
+        
+        picture:"",
+        name: "" ,
+        phone: "",
+        email: "",
+        dob: ""
+      }]);
+    
+      useEffect(() => {
+    
+        API.getUsers().then((res) => {
+    
+          const data = res.data.results;
+          const allUsers = data.map((user) => {
+    
+            return({
+              
+              picture: user.picture.medium,
+              name: user.name.first +" "+ user.name.last,
+              phone: user.phone,
+              email: user.email,
+              dob: user.dob.date
+            })
+          });
+          setUsers(allUsers);
+        });
+        
+    
+      },[]);
+    
+    
+    
+      console.log('this is state 0 info ',users[0].name,users[0].phone,users[0].picture,users[0].email,users[0].dob)
 
     return(
     <React.Fragment>
@@ -18,23 +55,19 @@ function Table (){
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <React.Fragment>
+                {users.map((user,index)=>(
+                    <tr >
                     <th scope="row">1</th>
-                    <td ><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" alt="img" className="rounded-circle" style={{height:70,width:70}} /></td>
-                    <td>Sara</td>
-                    <td>444 444 4444</td>
-                    <td>@twitter</td>
-                    <td>1-1-2020</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td ><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" alt="img" className="rounded-circle" style={{height:70,width:70}} /></td>
-                    <td>Sara</td>
-                    <td>444 444 4444</td>
-                    <td>@twitter</td>
-                    <td>1-1-2020</td>
-                </tr>
-               
+                    <td ><img src={user.picture} alt="img" className="rounded-circle" style={{ height: 70, width: 70 }} /></td>
+                    <td>{user.name}</td>
+                    <td>{user.phone}</td>
+                    <td>{user.email}</td>
+                    <td>{user.dob}</td>
+                    </tr>         
+
+                ))}        
+                </React.Fragment>
             </tbody>
         </table>
     </React.Fragment>
