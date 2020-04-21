@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from './component/Navbar/Navbar';
-import SearchForm from './component/SearchBar/Search';
-import Main from './component/Main/Main';
+// import SearchForm from './component/SearchBar/Search';
+
+import Table from './component/Table/Table';
 // import API from './utils/API';
+
 
 
 function App() {
@@ -12,8 +14,9 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <SearchForm />
-      <Main />
+      <div className="container">
+      <Table/> 
+    </div>
 
     </React.Fragment>
   );

@@ -71,31 +71,48 @@ function Table() {
 
 
     }
-
-
-
-
     console.log('this is our new order', newOrder)
     console.log('this is the old users!!!', users)
     setUsers([...users]);
 
-  }
+  };
+  function handleUserSearch(userName) {
+
+    // users.filter(userName)
+    console.log("This is user name have ben searched :", userName);
+}
 
 
   console.log('Thos is the users state!!!', users)
   return (
     <React.Fragment>
+      <form>
+        
+          <div className="form-row search-wrapper col-md-12 col-sm-12">
+            <div className="col-md-6"></div>
+              <div className="col-md-6 mb-3 ">
+                  <label>Search</label>
+                  <div className="input-group ">
+                      <input type="text" className="form-control shadow-lg p-3 mb-5 bg-white rounded " name="search" onChange={(event) => { handleUserSearch(event.target.value) }} />
+                      {/* <div className="input-group-prepend">
+                          <button className="btn btn-dark" >Search</button>
+                      </div> */}
+                  </div>
+              </div>
 
+          </div>
+        
+      </form>
 
       <table className="table table-striped table-dark">
         <thead >
           <tr>
-            <th scope="col" style={{ padding: 20 }}>#</th>
-            <th scope="col" style={{ padding: 20 }}>Image <span></span></th>
-            <th scope="col" style={{ padding: 20 }}>Name <span name="name" className="fas fa-sort ml-1" onClick={event => { handleSort("name") }}></span></th>
-            <th scope="col" style={{ padding: 20 }}>Phone <span name="phone" className="fas fa-sort ml-1" onClick={event => { handleSort("phone") }}></span></th>
-            <th scope="col" style={{ padding: 20 }}>Email <span name="email" className="fas fa-sort ml-1" onClick={event => { handleSort("email") }}></span></th>
-            <th scope="col" style={{ padding: 20 }}>DBO <span name="dbo" className="fas fa-sort ml-1" onClick={event => { handleSort("dbo") }}></span></th>
+            {/* <th scope="col" style={{ padding: 20 }}>#</th> */}
+            <th scope="col" className="">Image <span></span></th>
+            <th scope="col" className="">Name <span name="name" className="fas fa-sort ml-1" onClick={event => { handleSort("name") }}></span></th>
+            <th scope="col" className="">Phone <span name="phone" className="fas fa-sort ml-1" onClick={event => { handleSort("phone") }}></span></th>
+            <th scope="col" className="">Email <span name="email" className="fas fa-sort ml-1" onClick={event => { handleSort("email") }}></span></th>
+            <th scope="col" className="">DBO <span name="dbo" className="fas fa-sort ml-1" onClick={event => { handleSort("dbo") }}></span></th>
           </tr>
 
         </thead>
@@ -103,7 +120,7 @@ function Table() {
           <React.Fragment>
             {users.map((user, index) => (
               <tr key={user.id} >
-                <th scope="row">{user.id + 1}</th>
+                {/* <th scope="row">{user.id + 1}</th> */}
                 <td ><img src={user.picture} alt="img" className="rounded-circle" style={{ height: 70, width: 70 }} /></td>
                 <td>{user.name}</td>
                 <td>{user.phone}</td>
