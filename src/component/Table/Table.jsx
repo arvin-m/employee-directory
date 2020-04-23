@@ -49,14 +49,14 @@ function Table() {
   const handleSort = (value) => {
     let newOrder;
     if (orderState.order === "asc") {
-      newOrder = users.sort(function (a, b) {
+      newOrder = usersToshow.sort(function (a, b) {
         if (a[value] < b[value]) { return -1; }
         if (a[value] > b[value]) { return 1; }
         return 0;
       })
       setOrderState({ ...orderState, order: "dsc" });
     } else {
-      newOrder = users.sort(function (a, b) {
+      newOrder = usersToshow.sort(function (a, b) {
 
         if (a[value] > b[value]) { return -1; }
         if (a[value] < b[value]) { return 1; }
@@ -78,18 +78,18 @@ function Table() {
     setSearch(filterInput);
   }
 
-  let usersTohow
+  let usersToshow;
   console.log("Search ", search)
   console.log("users ", users)
   if (search.length === 0 && inputState.length > 0) {
-    usersTohow = []
+    usersToshow = []
   } else if (search.length > 0) {
-    usersTohow = search
+    usersToshow = search
   } else {
-    usersTohow = users
+    usersToshow = users
   }
 
-  let HandleTable = usersTohow.map((user) => (
+  let HandleTable = usersToshow.map((user) => (
 
     <tr key={user.id} >
       <td ><img src={user.picture} alt="img" className="rounded-circle" style={{ height: 70, width: 70 }} /></td>

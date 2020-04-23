@@ -7,8 +7,8 @@ function Navbar() {
     return (
         <React.Fragment>
             <header>
-                <nav className="navbar-expand-lg navbar-dark indigo col-12">
-                    <div className="view intro-2">
+                <nav className=" view navbar-expand-lg navbar-dark indigo col-12">
+                    <div className="intro-2">
                         <div className="full-bg-img">
                             <div className="mask rgba-black-light flex-center">
                                 <div className="container text-center white-text">
