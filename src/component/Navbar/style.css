@@ -1,20 +1,25 @@
 .view {
-    background: url("https://images.pexels.com/photos/3773835/pexels-photo-3773835.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")no-repeat center center;
-    /* background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center; */
+    background: url("https://miro.medium.com/max/5560/1*tuUvKrBDaRjG4_ZlZM6s4Q.jpeg")no-repeat center center;
+    
     background-size:cover;
     
     
 }
 .navbar-expand-lg{
-     height: 247px;;
+     height: 300px;;
 }
 html,
 body,
-header,
-.view {
+header{
   height: 100%;
 }
-h1,h5{
-  color:rgb(51, 50, 50);
-  margin-top: 30px;
+h1{
+  color:white;
+  margin-top: 76px;
+  font-family: 'Lilita One', cursive;
+}
+h5{
+  color:white;
+  margin-top: 50px;
+  font-family: 'Baloo Chettan 2', cursive;
 }

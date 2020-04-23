@@ -1,11 +1,11 @@
 .fa-sort:hover{
-    color:greenyellow !important;
+    color:#01b9c1 !important;
     font-size: large;
     
 }
 .form-row{
     padding:30px;
-    /* margin-left: 90px; */
+    
 }
 .search-wrapper{
     margin-top: 90px;
