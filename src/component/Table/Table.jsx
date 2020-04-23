@@ -130,7 +130,7 @@ function Table() {
             <th scope="col" className="">Name <span name="name" className="fas fa-sort ml-1" onClick={event => { handleSort("name") }}></span></th>
             <th scope="col" className="">Phone <span name="phone" className="fas fa-sort ml-1" onClick={event => { handleSort("phone") }}></span></th>
             <th scope="col" className="">Email <span name="email" className="fas fa-sort ml-1" onClick={event => { handleSort("email") }}></span></th>
-            <th scope="col" className="">DBO <span name="dbo" className="fas fa-sort ml-1" onClick={event => { handleSort("dbo") }}></span></th>
+            <th scope="col" className="">DBO </th>
           </tr>
 
         </thead>
