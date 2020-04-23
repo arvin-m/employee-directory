@@ -26,12 +26,6 @@ function Navbar() {
                 </nav>
             </header>
 
-
-
-
-
-
-
         </React.Fragment>
     )
 }
