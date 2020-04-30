@@ -1,3 +1,22 @@
+# Employee Directory with REACT 
+create a  employee directory with React.Given a table of random users,and when the user loads the page, a table of employees will render. The user will be able to:
+
+  * Sort the table by `NAME ` ,`PHONE` ,`EMAIL` category
+
+  * Filter the users by `NAME`.
+
+## Application Link
+[Live Link](https://arvin-m.github.io/employee-directory/).
+
+
+
+
+## User Story
+
+* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
